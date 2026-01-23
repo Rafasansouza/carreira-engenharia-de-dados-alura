@@ -15,3 +15,12 @@ restaurantes = [restaurante_praca, restaurante_pizza]
 #exercicio 1
 restaurante_praca.categoria = 'Italiana'
 print(vars(restaurante_praca))
+
+#exercicio 2
+print(restaurante_praca.nome)
+
+#exercicio 3
+if restaurante_pizza.ativo:
+    print(f'O restaurante {restaurante_pizza.nome} está ativo') 
+else:
+    print(f'O restaurante {restaurante_pizza.nome} está inativo')
