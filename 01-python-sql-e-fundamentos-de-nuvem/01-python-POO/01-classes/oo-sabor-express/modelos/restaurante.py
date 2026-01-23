@@ -43,5 +43,4 @@ restaurante_pizza.ativo = True
 print(f'O restaurante {restaurante_pizza.nome} está ativo')
 
 #exercicio 9
-print(restaurante_praca.nome)
-print(restaurante_praca.categoria)
+print(f'Nome: {restaurante_praca.nome}, Categoria: {restaurante_praca.categoria}')
