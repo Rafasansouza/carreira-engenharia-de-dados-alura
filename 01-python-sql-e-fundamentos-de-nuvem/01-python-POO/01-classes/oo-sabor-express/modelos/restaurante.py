@@ -24,3 +24,11 @@ if restaurante_pizza.ativo:
     print(f'O restaurante {restaurante_pizza.nome} está ativo') 
 else:
     print(f'O restaurante {restaurante_pizza.nome} está inativo')
+
+#exercicio 4
+nome = restaurante_praca.nome
+print(f'O nome do restaurante é {nome}')
+
+#exercicio 5
+restaurante_praca.nome = 'Bistrô'
+print(f'O novo nome do restaurante é {restaurante_praca.nome}')
