@@ -32,3 +32,8 @@ print(f'O nome do restaurante é {nome}')
 #exercicio 5
 restaurante_praca.nome = 'Bistrô'
 print(f'O novo nome do restaurante é {restaurante_praca.nome}')
+
+#exercicio 6 e 7
+restaurante_pizza.nome = 'Pizza Place'
+restaurante_pizza.categoria = 'Fast Food'
+print(restaurante_pizza.categoria)
