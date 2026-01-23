@@ -37,3 +37,11 @@ print(f'O novo nome do restaurante é {restaurante_praca.nome}')
 restaurante_pizza.nome = 'Pizza Place'
 restaurante_pizza.categoria = 'Fast Food'
 print(restaurante_pizza.categoria)
+
+#exercicio 8
+restaurante_pizza.ativo = True
+print(f'O restaurante {restaurante_pizza.nome} está ativo')
+
+#exercicio 9
+print(restaurante_praca.nome)
+print(restaurante_praca.categoria)
