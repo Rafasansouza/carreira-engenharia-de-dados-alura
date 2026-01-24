@@ -17,23 +17,24 @@ class Restaurante:
     def listar_restaurantes(cls):
         print(f'{'Restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {"Avaliação".ljust(25)} | {"Status"}')
         for restaurante in cls.restaurantes:
-            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {str(restaurante.media_avaliacoes).ljust(25)} | {restaurante._ativo}')
+            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {str(restaurante.media_avaliacoes).ljust(25)} | {restaurante.ativo}')
 
     @property
     def ativo(self):
-        return 'Ativo' if self._ativo else 'Inativo'
+        return '🗸' if self._ativo else '𐄂'
     
     def alternar_status(self):
         self._ativo = not self._ativo
 
     def adicionar_avaliacao(self, cliente, nota):
-        avaliacao = Avaliacao(cliente, nota)
-        self._avaliacao.append(avaliacao)
+        if 0 < nota <= 5:
+            avaliacao = Avaliacao(cliente, nota)
+            self._avaliacao.append(avaliacao)
 
     @property
     def media_avaliacoes(self):
         if not self._avaliacao:
-            return 0
+            return '--'
         soma_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
         qtde_notas = len(self._avaliacao)
         media_notas = round(soma_notas / qtde_notas, 1)
